@@ -1,0 +1,101 @@
+/* variable */
+:root {
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-cyan: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+	--dark-gray: hsl(0, 0%, 59%);
+	--light-gray: hsl(0, 0%, 89%);
+	--mobile-size: 375px;
+	--desktop-size: 1440px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Kumbh Sans", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	background: var(--dark-cyan);
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+body::before {
+	content: "";
+	background-image: url("../images/bg-pattern-bottom.svg");
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+body::after {
+	content: "";
+	background-image: url("../images/bg-pattern-top.svg");
+	width: 50%;
+	height: 60%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotate(180deg);
+}
+#profile {
+	width: 335px;
+	background: #fff;
+	border-radius: 15px;
+	overflow: hidden;
+	z-index: 999;
+}
+.profile-section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: -51px;
+}
+.pattern {
+	width: 100%;
+}
+.profile {
+	border-radius: 50%;
+	align-self: center;
+	border: 6px solid #fff;
+}
+.stats {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border-top: 1px solid var(--light-gray);
+	padding: 30px 0;
+}
+.stat {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.count {
+	font-weight: 700;
+	margin: 0 0 7px;
+}
+.type {
+	font-size: 12px;
+	margin: 0;
+	color: var(--dark-gray);
+}
+.name {
+	font-weight: 700;
+	margin: 20px 0 10px;
+	text-align: center;
+}
+.name > span {
+	font-weight: 400;
+	color: var(--dark-gray);
+}
+.location {
+	font-weight: 400;
+	color: var(--dark-gray);
+	text-align: center;
+	margin: 0 0 30px;
+}
